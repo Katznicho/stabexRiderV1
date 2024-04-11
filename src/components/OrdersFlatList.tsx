@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View, FlatList, Platform } from 'react-native'
+import { Pressable, StyleSheet, Text, View, FlatList, Platform, Image } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { COLORS } from '../theme/theme';
@@ -26,6 +26,16 @@ const OrdersFlatList = ({ ordersData }: any) => {
                             }
                             )}
                     >
+                         <View>
+                              <Image
+                                  source={require('../assets/app_images/stabex_logo.jpg')}
+                                  style={{
+                                      width: 50,
+                                      height: 50,
+                                      borderRadius:20
+                                  }}
+                              />
+                         </View>
 
                         <View
                             style={{
@@ -37,11 +47,9 @@ const OrdersFlatList = ({ ordersData }: any) => {
                                 elevation: 5,
                             }}
                         >
-                            <Text style={[generalStyles.CardTitle]}>{item?.ApplicationUser?.Company}</Text>
-                            <Text style={[generalStyles.CardTitle]}>{item?.ApplicationUser?.FirstName} {item?.ApplicationUser?.LastName}</Text>
-                            <Text style={[generalStyles.CardSubtitle]}>{item?.order_type}</Text>
-                            <Text style={[generalStyles.CardSubtitle]}>{item?.address}</Text>
-                            <Text style={[generalStyles.CardTitle]}>{item?.address_type}</Text>
+                            <Text style={[generalStyles.CardTitle]}>{"Kawempe, ttula "}</Text>
+                            <Text style={[generalStyles.CardPriceCurrency]}>{"02/02/2024 6:00pm"}</Text>
+                            <Text style={[generalStyles.CardPriceCurrency]}>{"cash"}</Text>
                         </View>
                         <View
                             style={{
@@ -50,7 +58,7 @@ const OrdersFlatList = ({ ordersData }: any) => {
                         >
                             {/* amount details */}
                             <View>
-                                <Text style={[generalStyles.CardSubtitle]}>UGX {parseInt(item?.delivery_cost + item?.purchase_cost)?.toLocaleString()}</Text>
+                                <Text style={[generalStyles.CardSubtitle]}>UGX {parseInt(1000)?.toLocaleString()}</Text>
                             </View>
                             {/* amoun details */}
                         </View>

@@ -4,13 +4,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { COLORS, FONTSIZE, SPACING } from '../theme/theme';
 import CustomIcon from '../components/CustomIcon';
 import HomeStack from './HomeStack';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import OrderStack from './OrderStack';
-import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import ProfileStack from './ProfileStack';
-import { useSelector } from 'react-redux';
-import { RootState } from '../redux/store/dev';
+import OrderStack from './OrderStack';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -59,7 +56,7 @@ const TabNavigator = () => {
       />
       <Tab.Screen
         name="History"
-        component={HomeStack}
+        component={OrderStack}
         options={{
           title: "History",
           tabBarShowLabel: true,

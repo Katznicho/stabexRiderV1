@@ -297,36 +297,6 @@ const HomeScreen = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    padding: 10,
-  },
-  card: {
-    backgroundColor: '#f9f9f9',
-    marginBottom: 10,
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: '#ddd',
-  },
-  cardContent: {
-    padding: 15,
-  },
-  customerName: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 5,
-  },
-  address: {
-    marginBottom: 5,
-  },
-  status: {
-    marginBottom: 5,
-    color: '#007bff',
-  },
-  detail: {
-    marginBottom: 3,
-  },
   summaryContainer: {
     marginHorizontal: 10,
     marginVertical: 10,
