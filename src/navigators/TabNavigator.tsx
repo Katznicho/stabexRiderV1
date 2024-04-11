@@ -26,6 +26,10 @@ const TabNavigator = () => {
           backgroundColor: COLORS.primaryBlackHex,
           borderTopWidth: 0,
           height: 70,
+          marginVertical:10,
+          marginHorizontal:10,
+          borderRadius:20
+          
         },
       }}>
       <Tab.Screen
@@ -33,7 +37,8 @@ const TabNavigator = () => {
         component={HomeStack}
         options={{
           title: "Home",
-          tabBarShowLabel: false,
+          tabBarShowLabel: true,
+          tabBarLabelStyle: styles.tabBarLabelStyle,
           tabBarIcon: ({ focused, color, size }) => {
             return (
               <View
@@ -46,7 +51,8 @@ const TabNavigator = () => {
                   color={COLORS.primaryBlackHex}
                   size={25}
                 />
-              </View>
+                </View>
+              
             );
           },
         }}
@@ -56,7 +62,8 @@ const TabNavigator = () => {
         component={HomeStack}
         options={{
           title: "History",
-          tabBarShowLabel: false,
+          tabBarShowLabel: true,
+          tabBarLabelStyle: styles.tabBarLabelStyle,
           tabBarIcon: ({ focused, color, size }) => {
             return (
               <View
@@ -80,6 +87,8 @@ const TabNavigator = () => {
         component={ProfileStack}
         options={{
           title: "Profile",
+          tabBarShowLabel: true,
+          tabBarLabelStyle: styles.tabBarLabelStyle,
           tabBarIcon: ({ focused, color, size }) => (
 
             <View
@@ -105,6 +114,11 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 25,
   },
+  tabBarLabelStyle: {
+    // fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom:4
+  }
 });
 
 export default TabNavigator;
