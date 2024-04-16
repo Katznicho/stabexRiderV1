@@ -26,6 +26,9 @@ export const GET_CUSTOMER_ADDRESSES = `${BASE_URL}/api/Orders/MyDeliveryAddresse
 //rider orders
 export const GET_RIDER_ORDERS = `${BASE_URL}/api/Rider/RiderOrders`;
 
+//rider update status
+export const RIDER_UPDATE_STATUS = `${BASE_URL}/api/Rider/UpdateStatus`;
+
 
 
 export const PROFILE_UPLOAD = `${BASE_URL}/auth/profileUpload`

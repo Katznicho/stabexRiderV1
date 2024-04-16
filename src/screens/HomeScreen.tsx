@@ -18,7 +18,7 @@ import OrderCard from '../components/OrderCard';
 const width = Dimensions.get('window').width;
 
 const HomeScreen = () => {
-  const { authToken } = useSelector((state: RootState) => state.user);
+  const { user} = useSelector((state: RootState) => state.user);
 
   const { data, error, isLoading, refetch } = usePostQuery<any>({
     endpoint: '/api/Rider/RiderOrders',
@@ -132,7 +132,7 @@ const HomeScreen = () => {
                 />
               </View>
               <View style={{ marginHorizontal: 10 }}>
-                <Text style={[generalStyles.CardTitle]}>Katende Nicholas</Text>
+                <Text style={[generalStyles.CardTitle]}>{user.fullName}</Text>
                 <Text style={[generalStyles.CardSubtitle]}>20 Deliveries</Text>
                 <View style={[generalStyles.flexStyles, { alignItems: "center" }]}>
                   {
