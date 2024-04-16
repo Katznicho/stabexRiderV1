@@ -17,9 +17,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Share from 'react-native-share';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { logoutUser, showAuthScreen } from '../redux/store/slices/UserSlice';
-import { LOGOUT } from '../screens/utils/constants/routes';
 import HeadProfileCard from './HeadProfileCard';
 
 
@@ -28,7 +26,7 @@ import HeadProfileCard from './HeadProfileCard';
 
 
 const DrawerContent = (props: any) => {
-    const { user, authToken, isGuest } = useSelector((state: RootState) => state.user);
+    const { user} = useSelector((state: RootState) => state.user);
     const [selectedItem, setSelectedItem] = useState<string>('Home');
     const navigation = useNavigation<any>()
     const [expanded, setExpanded] = useState(false);
@@ -133,7 +131,7 @@ const DrawerContent = (props: any) => {
                 >
                     <HeadProfileCard />
                     <View>
-                        <Text style={[generalStyles.textStyle]}>{isGuest ? 'Hello Guest' : user.fullName}</Text>
+                        <Text style={[generalStyles.textStyle]}>{user.fullName}</Text>
                     </View>
 
                 </View>
@@ -175,12 +173,9 @@ const DrawerContent = (props: any) => {
                     />}
                     onPress={() => {
                         setSelectedItem('Payments');
-                        if (isGuest) {
-                            return handleShowAlert()
-                        }
-                        else {
+                        
                             return navigation.navigate('Payments');
-                        }
+                        
 
                     }}
                     style={[{
@@ -328,7 +323,7 @@ const DrawerContent = (props: any) => {
 
             {/* logout  */}
             <DrawerItem
-                label={isGuest ? "Login" : "Logout"}
+                label={"Logout"}
                 icon={() => <AntDesign
                     name="logout"
                     size={25}
@@ -336,15 +331,10 @@ const DrawerContent = (props: any) => {
                 />
                 }
                 onPress={() => {
-                    if (!isGuest) {
+                    
                         setSelectedItem('Logout');
-                        onSignOut()
-
-                    }
-                    else {
-                        setSelectedItem('Logout');
-                        dispatch(showAuthScreen(true));
-                    }
+                        return dispatch(showAuthScreen(true));
+                    
 
                 }}
                 style={[{
@@ -372,7 +362,7 @@ const HeaderExpandableSection = ({ expanded, setExpanded }: any) => {
     return <View>
         <View style={[generalStyles.flexStyles, { alignItems: "center", justifyContent: "space-between" }, styles.tabStyles]}>
             <View>
-                <Text style={[styles.labelStyle, { fontFamily: FONTFAMILY.poppins_semibold, fontSize: 18 }]}>Settings & Support</Text>
+                <Text style={[styles.labelStyle, { fontFamily: FONTFAMILY.Lovato_Bold, fontSize: 18 }]}>Settings & Support</Text>
             </View>
             <TouchableOpacity>
                 <Ionicons name={expanded ? "chevron-up" : "chevron-down"}
@@ -391,7 +381,7 @@ export default DrawerContent
 
 const styles = StyleSheet.create({
     labelStyle: {
-        color: COLORS.primaryWhiteHex, fontFamily: FONTFAMILY.poppins_light, fontSize: 14
+        color: COLORS.primaryWhiteHex, fontFamily: FONTFAMILY.Lovato_Regular, fontSize: 14
     },
     tabStyles: {
         marginVertical: 5,

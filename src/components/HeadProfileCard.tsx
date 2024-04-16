@@ -1,6 +1,5 @@
 import { View, TouchableOpacity, Image } from 'react-native';
 import React, { useState, useEffect } from 'react';
-import { showMessage } from 'react-native-flash-message';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../redux/store/dev';
 import UploadComponent from './UploadComponent';

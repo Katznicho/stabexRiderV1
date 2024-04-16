@@ -13,7 +13,6 @@ import Entypo from "react-native-vector-icons/Entypo";
 import Share from 'react-native-share';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../redux/store/dev';
-import { LOGOUT } from '../screens/utils/constants/routes';
 import { logoutUser } from '../redux/store/slices/UserSlice';
 
 
@@ -51,18 +50,6 @@ const ProfileDetailsCard = ({
             const headers = new Headers();
             headers.append('Accept', 'application/json');
             headers.append('Authorization', `Bearer ${authToken}`);
-            fetch(`${LOGOUT}`, {
-                headers,
-                method: 'POST',
-            })
-                .then(a => a.json())
-                .then(result => {
-                    dispatch(logoutUser());
-                })
-                .catch(error => {
-                });
-
-
 
         } catch (error) {
         }
@@ -135,7 +122,7 @@ const ProfileDetailsCard = ({
                                         color={COLORS.primaryWhiteHex}
                                         size={28}
                                         style={{
-                                            fontFamily: FONTFAMILY.poppins_light,
+                                            fontFamily: FONTFAMILY.Lovato_Regular,
                                         }}
                                     />
                                 </TouchableOpacity>
@@ -155,11 +142,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginHorizontal: 15,
         borderBottomColor: "red",
-        borderBottowWidth: 10,
     },
     textStyle: {
         // fontWeight: 'bold',
-        fontFamily: FONTFAMILY.poppins_light,
+        fontFamily: FONTFAMILY.Lovato_Regular,
         color: COLORS.primaryWhiteHex,
         fontSize: 15,
     },

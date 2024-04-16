@@ -15,6 +15,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		381F974D816D404D90AEB053 /* red-maker.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EEF35D465C4169A63DBBAB /* red-maker.png */; };
 		4097D7C78A184B3DACB8D021 /* stabex_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 696E28CAACE24380A7479DD2 /* stabex_logo.jpg */; };
+		4193BD165EB94D51BBB349C5 /* Lovato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43EF2391AF24349BFB0BF38 /* Lovato-Light.ttf */; };
+		46D656564B5F4DB8A09323DE /* stabex_splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 92A0B47C8FC544B398C4E7F5 /* stabex_splash.json */; };
 		6699204B04434E6BA22C1BCC /* delivery_address.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FD50A8AACC8C4F53BF83B92F /* delivery_address.jpeg */; };
 		72DCE95370184D45A4EFBC2E /* spend_less.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5F9B2683AB8048FEB2999150 /* spend_less.jpeg */; };
 		7699B88040F8A987B510C191 /* libPods-stabexRider-stabexRiderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-stabexRider-stabexRiderTests.a */; };
@@ -38,15 +40,13 @@
 		9C33AC212BBFFAB000792D6D /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C33AC0D2BBFFAB000792D6D /* Octicons.ttf */; };
 		9C33AC222BBFFAB000792D6D /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C33AC0E2BBFFAB000792D6D /* SimpleLineIcons.ttf */; };
 		9C33AC232BBFFAB000792D6D /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C33AC0F2BBFFAB000792D6D /* Zocial.ttf */; };
+		A8798A8EB2224799A2CCBDAD /* Lovato-Demi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BA69E627B492BA2D86BC0 /* Lovato-Demi.ttf */; };
+		AEB8977148E041008D357611 /* Lovato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0680C1D55B843698E3FE85A /* Lovato-Regular.ttf */; };
+		C6215C7D6BF046E88CC494A6 /* Lovato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF225FB9206542F18E846C26 /* Lovato-Black.ttf */; };
 		C838EEAE28174328BB8B7765 /* stabex.png in Resources */ = {isa = PBXBuildFile; fileRef = B28BF65BDA9B4A1580085244 /* stabex.png */; };
 		D6BABC5B77CB41F2B9F577CA /* apply_for_card.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 49F18780C2F14E2CB1C98AA6 /* apply_for_card.jpeg */; };
 		E33F44AD3E5A449F94B05A06 /* card_image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C9E131890EB9455CAA8DBDFF /* card_image.jpeg */; };
-		C6215C7D6BF046E88CC494A6 /* Lovato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF225FB9206542F18E846C26 /* Lovato-Black.ttf */; };
 		F0C51207CA574C4AA1860EE6 /* Lovato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B4D58F221D440A58B0B2352 /* Lovato-Bold.ttf */; };
-		A8798A8EB2224799A2CCBDAD /* Lovato-Demi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BA69E627B492BA2D86BC0 /* Lovato-Demi.ttf */; };
-		4193BD165EB94D51BBB349C5 /* Lovato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43EF2391AF24349BFB0BF38 /* Lovato-Light.ttf */; };
-		AEB8977148E041008D357611 /* Lovato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0680C1D55B843698E3FE85A /* Lovato-Regular.ttf */; };
-		46D656564B5F4DB8A09323DE /* stabex_splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 92A0B47C8FC544B398C4E7F5 /* stabex_splash.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +78,11 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-stabexRider.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-stabexRider.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F9B2683AB8048FEB2999150 /* spend_less.jpeg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = spend_less.jpeg; path = ../src/assets/app_images/spend_less.jpeg; sourceTree = "<group>"; };
 		696E28CAACE24380A7479DD2 /* stabex_logo.jpg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = stabex_logo.jpg; path = ../src/assets/app_images/stabex_logo.jpg; sourceTree = "<group>"; };
+		6B2BA69E627B492BA2D86BC0 /* Lovato-Demi.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lovato-Demi.ttf"; path = "../src/assets/fonts/Lovato-Demi.ttf"; sourceTree = "<group>"; };
+		6B4D58F221D440A58B0B2352 /* Lovato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lovato-Bold.ttf"; path = "../src/assets/fonts/Lovato-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = stabexRider/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-stabexRider-stabexRiderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stabexRider-stabexRiderTests.release.xcconfig"; path = "Target Support Files/Pods-stabexRider-stabexRiderTests/Pods-stabexRider-stabexRiderTests.release.xcconfig"; sourceTree = "<group>"; };
+		92A0B47C8FC544B398C4E7F5 /* stabex_splash.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = stabex_splash.json; path = ../src/assets/splash/stabex_splash.json; sourceTree = "<group>"; };
 		9C33ABFD2BBFFAB000792D6D /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
 		9C33ABFE2BBFFAB000792D6D /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
 		9C33ABFF2BBFFAB000792D6D /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
@@ -99,17 +102,14 @@
 		9C33AC0D2BBFFAB000792D6D /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		9C33AC0E2BBFFAB000792D6D /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		9C33AC0F2BBFFAB000792D6D /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		A43EF2391AF24349BFB0BF38 /* Lovato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lovato-Light.ttf"; path = "../src/assets/fonts/Lovato-Light.ttf"; sourceTree = "<group>"; };
 		A6EEF35D465C4169A63DBBAB /* red-maker.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "red-maker.png"; path = "../src/assets/app_images/red-maker.png"; sourceTree = "<group>"; };
 		B28BF65BDA9B4A1580085244 /* stabex.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = stabex.png; path = ../src/assets/app_images/stabex.png; sourceTree = "<group>"; };
 		C9E131890EB9455CAA8DBDFF /* card_image.jpeg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = card_image.jpeg; path = ../src/assets/app_images/card_image.jpeg; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EF225FB9206542F18E846C26 /* Lovato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lovato-Black.ttf"; path = "../src/assets/fonts/Lovato-Black.ttf"; sourceTree = "<group>"; };
+		F0680C1D55B843698E3FE85A /* Lovato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Lovato-Regular.ttf"; path = "../src/assets/fonts/Lovato-Regular.ttf"; sourceTree = "<group>"; };
 		FD50A8AACC8C4F53BF83B92F /* delivery_address.jpeg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = delivery_address.jpeg; path = ../src/assets/app_images/delivery_address.jpeg; sourceTree = "<group>"; };
-		EF225FB9206542F18E846C26 /* Lovato-Black.ttf */ = {isa = PBXFileReference; name = "Lovato-Black.ttf"; path = "../src/assets/fonts/Lovato-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6B4D58F221D440A58B0B2352 /* Lovato-Bold.ttf */ = {isa = PBXFileReference; name = "Lovato-Bold.ttf"; path = "../src/assets/fonts/Lovato-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6B2BA69E627B492BA2D86BC0 /* Lovato-Demi.ttf */ = {isa = PBXFileReference; name = "Lovato-Demi.ttf"; path = "../src/assets/fonts/Lovato-Demi.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A43EF2391AF24349BFB0BF38 /* Lovato-Light.ttf */ = {isa = PBXFileReference; name = "Lovato-Light.ttf"; path = "../src/assets/fonts/Lovato-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F0680C1D55B843698E3FE85A /* Lovato-Regular.ttf */ = {isa = PBXFileReference; name = "Lovato-Regular.ttf"; path = "../src/assets/fonts/Lovato-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		92A0B47C8FC544B398C4E7F5 /* stabex_splash.json */ = {isa = PBXFileReference; name = "stabex_splash.json"; path = "../src/assets/splash/stabex_splash.json"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

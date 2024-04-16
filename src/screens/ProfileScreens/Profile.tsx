@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 
 const Profile = () => {
 
-  const { isGuest } = useSelector((state: RootState) => state.user);
+  const { } = useSelector((state: RootState) => state.user);
 
   const [profile_details,] = useState([
     {
@@ -33,11 +33,7 @@ const Profile = () => {
       name: 'Support',
       screen: 'Support',
     },
-    // Conditionally render "Sign Out" based on user authentication
-    isGuest ? null : {
-      name: 'Sign Out',
-      screen: 'Sign Out',
-    },
+   
   ].filter(Boolean)); // Filter out null values
 
   const tabBarHeight = useBottomTabBarHeight();

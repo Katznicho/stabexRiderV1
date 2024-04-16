@@ -1,12 +1,13 @@
 import React from 'react';
 import { Platform, StyleSheet, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { COLORS, FONTSIZE, SPACING } from '../theme/theme';
+import { COLORS, FONTFAMILY } from '../theme/theme';
 import CustomIcon from '../components/CustomIcon';
 import HomeStack from './HomeStack';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import ProfileStack from './ProfileStack';
 import OrderStack from './OrderStack';
+
 
 
 const Tab = createBottomTabNavigator();
@@ -43,11 +44,11 @@ const TabNavigator = () => {
                   styles.activeTabBackground,
                   focused ? { backgroundColor: COLORS.primaryOrangeHex } : {},
                 ]}>
-                <CustomIcon
-                  name="home"
-                  color={COLORS.primaryBlackHex}
-                  size={25}
-                />
+                <AntDesign
+                name="home"
+                size={25}
+                color={COLORS.primaryBlackHex}
+              />
                 </View>
               
             );
@@ -68,11 +69,11 @@ const TabNavigator = () => {
                   styles.activeTabBackground,
                   focused ? { backgroundColor: COLORS.primaryOrangeHex } : {},
                 ]}>
-                <CustomIcon
-                  name="menu"
-                  color={COLORS.primaryBlackHex}
-                  size={25}
-                />
+                <AntDesign
+                name="menu-fold"
+                size={25}
+                color={COLORS.primaryBlackHex}
+              />
               </View>
             );
           },
@@ -114,7 +115,8 @@ const styles = StyleSheet.create({
   tabBarLabelStyle: {
     // fontSize: 20,
     fontWeight: 'bold',
-    marginBottom:4
+    marginBottom:4,
+    fontFamily:FONTFAMILY.Lovato_Bold
   }
 });
 
