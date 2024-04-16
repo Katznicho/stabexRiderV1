@@ -3,7 +3,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import React, { useState, useRef } from 'react'
 import { generalStyles } from '../utils/generatStyles';
 import { useNavigation } from '@react-navigation/native';
-import { COLORS } from '../../theme/theme';
+import { COLORS, FONTFAMILY } from '../../theme/theme';
 import { ActivityIndicator } from '../../components/ActivityIndicator';
 import { showMessage } from 'react-native-flash-message';
 import { LOGIN, LOGIN_IN_USER } from '../utils/constants/routes';
@@ -88,139 +88,124 @@ const Login = () => {
       formBody = formBody.join("&");
 
 
-      // fetch(LOGIN_IN_USER, {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-      //   },
-      //   body: formBody
-      // })
-      //   .then((response) => response.text())
-      //   .then((result) => {
-      //     setLoading(false);
-      //     // Parse the response text into individual JSON objects
-      //     const jsonObjects = result.trim().split(/\}\s*\{/);
+      fetch(LOGIN_IN_USER, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+        body: formBody
+      })
+        .then((response) => response.text())
+        .then((result) => {
+          setLoading(false);
+          // Parse the response text into individual JSON objects
+          const jsonObjects = result.trim().split(/\}\s*\{/);
 
-      //     // Parse only the first JSON object
-      //     try {
-      //       const firstObject = JSON.parse(jsonObjects[0] + (jsonObjects.length > 1 ? '}' : ''));
-      //       // Check if the parsed object has the 'status' property
+          // Parse only the first JSON object
+          try {
+            const firstObject = JSON.parse(jsonObjects[0] + (jsonObjects.length > 1 ? '}' : ''));
+            // Check if the parsed object has the 'status' property
 
-      //       if (firstObject && firstObject.status) {
-      //         if (firstObject.status == 3) {
-      //           showMessage({
-      //             message: "Verify Phone Number",
-      //             description: "Please verify your phone number",
-      //             type: "success",
-      //             autoHide: true,
-      //             duration: 3000,
-      //             icon: "success"
-      //           });
-      //           navigation.navigate("VerifyPhoneNumber", {
-      //             phoneNumber: phoneNumber,
-      //             email: password
-      //           })
-      //           // Handle verify phone number logic
-      //         } else if (firstObject.status == 0) {
-      //           showMessage({
-      //             message: "Login Failed",
-      //             description: "Invalid phone number or password",
-      //             type: "info",
-      //             autoHide: true,
-      //             duration: 3000,
-      //             icon: "danger"
-      //           });
-      //           // Handle login failed logic
-      //         } else if (firstObject.status == 1) {
-      //           // Handle login successful logic
-      //           let token = firstObject?.access_token;
+            if (firstObject && firstObject.status) {
+              if (firstObject.status == 3) {
+                showMessage({
+                  message: "Verify Phone Number",
+                  description: "Please verify your phone number",
+                  type: "success",
+                  autoHide: true,
+                  duration: 3000,
+                  icon: "success"
+                });
+                navigation.navigate("VerifyPhoneNumber", {
+                  phoneNumber: phoneNumber,
+                  email: password
+                })
+                // Handle verify phone number logic
+              } else if (firstObject.status == 0) {
+                showMessage({
+                  message: "Login Failed",
+                  description: "Invalid phone number or password",
+                  type: "info",
+                  autoHide: true,
+                  duration: 3000,
+                  icon: "danger"
+                });
+                // Handle login failed logic
+              } else if (firstObject.status == 1) {
+                // Handle login successful logic
+                let token = firstObject?.access_token;
 
-      //           AsyncStorage.setItem('token', token);
-      //           let name = `${firstObject?.FirstName} ${firstObject?.LastName}`
-      //           let email = `${firstObject?.Email}`;
-      //           let phone = `${firstObject?.MobileNumber}`;
-      //           let displayPicture = `${firstObject?.Avatar}`;
-      //           let role = `${firstObject?.role}`;
-      //           dispatch(
-      //             updateUserState({
-      //               isLoggedIn: true,
-      //               user: {
-      //                 UID: token,
-      //                 fullName: name,
-      //                 email: email,
-      //                 phone: phone,
-      //                 displayPicture: displayPicture,
-      //                 role: role
-      //               },
-      //               authToken: token,
-      //               linkedCard: null
-      //             }),
-      //           );
-      //         } else {
-      //           showMessage({
-      //             message: "Login Failed",
-      //             description: "Invalid phone number or password",
-      //             type: "info",
-      //             autoHide: true,
-      //             duration: 3000,
-      //             icon: "danger"
-      //           });
-      //           // Handle other status codes
-      //         }
-      //       } else {
-      //         showMessage({
-      //           message: "Login Failed",
-      //           description: "Invalid phone number or password",
-      //           type: "info",
-      //           autoHide: true,
-      //           duration: 3000,
-      //           icon: "danger"
-      //         });
-      //         // Handle invalid response format
-      //       }
-      //     } catch (error) {
-      //       showMessage({
-      //         message: "Error",
-      //         description: "Invalid phone number or password",
-      //         type: "info",
-      //         autoHide: true,
-      //         duration: 3000,
-      //         icon: "danger"
-      //       });
-      //       // Handle JSON parsing error
-      //     }
-      //   })
-      //   .catch((error) => {
-      //     setLoading(false);
-      //     showMessage({
-      //       message: "Error",
-      //       description: "Invalid phone number or password",
-      //       type: "info",
-      //       autoHide: true,
-      //       duration: 3000,
-      //       icon: "danger"
-      //     });
-      //   });
+                console.log("=====================")
+                console.log(token)
+                console.log("=====================")
 
-      dispatch(
-        updateUserState({
-          isLoggedIn: true,
-          user: {
-            UID: "token",
-            fullName:"Katende Nicholas",
-            email: "katznicholas@me.com",
-            phone: "08123456789",
-            displayPicture: "displayPicture",
-            role: "role"
-          },
-          authToken: "token",
-          linkedCard: null
-        }),
-      );
-
-
-
-
+                AsyncStorage.setItem('token', token);
+                let name = `${firstObject?.FirstName} ${firstObject?.LastName}`
+                let email = `${firstObject?.Email}`;
+                let phone = `${firstObject?.MobileNumber}`;
+                let displayPicture = `${firstObject?.Avatar}`;
+                let role = `${firstObject?.role}`;
+                dispatch(
+                  updateUserState({
+                    isLoggedIn: true,
+                    user: {
+                      UID: token,
+                      fullName: name,
+                      email: email,
+                      phone: phone,
+                      displayPicture: displayPicture,
+                      role: role
+                    },
+                    authToken: token,
+                    isGuest: false,
+                    linkedCard: null
+                  }),
+                );
+              } else {
+                showMessage({
+                  message: "Login Failed",
+                  description: "Invalid phone number or password",
+                  type: "info",
+                  autoHide: true,
+                  duration: 3000,
+                  icon: "danger"
+                });
+                // Handle other status codes
+              }
+            } else {
+              showMessage({
+                message: "Login Failed",
+                description: "Invalid phone number or password",
+                type: "info",
+                autoHide: true,
+                duration: 3000,
+                icon: "danger"
+              });
+              // Handle invalid response format
+            }
+          } catch (error) {
+            showMessage({
+              message: "Error",
+              description: "Invalid phone number or password",
+              type: "info",
+              autoHide: true,
+              duration: 3000,
+              icon: "danger"
+            });
+            // Handle JSON parsing error
+          }
+        })
+        .catch((error) => {
+          setLoading(false);
+          showMessage({
+            message: "Error",
+            description: "Invalid phone number or password",
+            type: "info",
+            autoHide: true,
+            duration: 3000,
+            icon: "danger"
+          });
+        });
 
 
     } catch (error) {
@@ -248,29 +233,18 @@ const Login = () => {
         {/* <Text style={styles.title}>{'Login'}</Text> */}
 
 
-
         {/* center logo */}
-        <View style={generalStyles.centerContent}>
-          <Image
-            source={require('../../assets/app_images/stabex_logo.jpg')}
-            style={{
-              width: 100,
-              height: 100,
-              // tintColor: COLORS.primaryBlackHex,
-              borderRadius: 20
-            }}
-            resizeMode="contain"
-          />
+        <View style={[generalStyles.centerContent, {marginVertical:20}]}>
+            <Text style={[generalStyles.authTitle, {fontSize:15, color:COLORS.primaryBlackRGBA}]}>
+               Enter registered email or phone number and
+            </Text>
+            <Text style={[{fontSize:15, color:COLORS.primaryBlackRGBA, fontFamily:FONTFAMILY.Lovato_Bold}]}>password to login into your account</Text>
 
         </View>
         {/* center logo */}
 
-        {/* phone number */}
-        <View style={generalStyles.formContainer}>
-          <View>
-            <Text style={generalStyles.formInputTextStyle}>
-              Phone Number </Text>
-          </View>
+                {/* phone number */}
+                <View style={[generalStyles.formContainer]}>
           <PhoneInput
             ref={phoneInput}
             defaultValue={phoneNumber}
@@ -279,11 +253,14 @@ const Login = () => {
             onChangeFormattedText={(text) => {
               setPhoneNumber(text);
             }}
-            placeholder={'Enter Phone Number'}
-            containerStyle={[generalStyles.formInput, { backgroundColor: COLORS.primaryBlackHex, }]}
+            placeholder={'Phone Number'}
+          
+            containerStyle={[generalStyles.formInput, generalStyles.borderStyles,{ backgroundColor: COLORS.primaryBlackHex, }]}
             textContainerStyle={{ paddingVertical: 0, backgroundColor: COLORS.primaryBlackHex, }}
             textInputProps={{
-              placeholderTextColor: COLORS.primaryWhiteHex
+              placeholderTextColor: COLORS.primaryWhiteHex,
+              fontFamily: FONTFAMILY.Lovato_Bold,
+
             }}
             // countries={['UG', 'KE']}
             countryPickerProps={{
@@ -299,17 +276,14 @@ const Login = () => {
         {/* phone number */}
 
 
-        <View style={generalStyles.formContainer}>
-          <View>
-            <Text style={generalStyles.formInputTextStyle}>
-              Password</Text>
-          </View >
-          <View style={[generalStyles.flexStyles, styles.viewStyles]}>
+        <View style={[generalStyles.formContainer, {marginVertical:10}]}>
+          
+          <View style={[generalStyles.flexStyles,generalStyles.borderStyles , {alignItems:"center"}]}>
             <TextInput
-              style={[generalStyles.formInput, { flex: 1 }]}
+              style={[generalStyles.formInput]}
               placeholderTextColor={COLORS.primaryWhiteHex}
               secureTextEntry={!showPassword}
-              placeholder={'Enter Password'}
+              placeholder={'Password'}
               onChangeText={text => setPassword(text)}
               value={password}
               underlineColorAndroid="transparent"

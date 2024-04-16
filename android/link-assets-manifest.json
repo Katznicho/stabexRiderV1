@@ -34,44 +34,28 @@
       "sha1": "6bd89f6dc903e7fd4d5fc3a1a95ad2260a8f6179"
     },
     {
-      "path": "src/assets/fonts/Poppins-Black.ttf",
-      "sha1": "645e04c53c6b5b35bce654a811ebce16af8aa721"
+      "path": "src/assets/fonts/Lovato-Black.ttf",
+      "sha1": "acca76357e42cd095f7f74b26635e7ff1772cf0b"
     },
     {
-      "path": "src/assets/fonts/Poppins-Bold.ttf",
-      "sha1": "875cf0cecd647bcf22e79d633d868c1b1ec98dfa"
+      "path": "src/assets/fonts/Lovato-Bold.ttf",
+      "sha1": "658355a6e8a73652781e7c58d4c5b0676a7200ce"
     },
     {
-      "path": "src/assets/fonts/Poppins-ExtraBold.ttf",
-      "sha1": "4b5c0750f073abd576413a0898d3b95adaf199c8"
+      "path": "src/assets/fonts/Lovato-Demi.ttf",
+      "sha1": "6043707108ba5734781f6d753f1e74d9a0309181"
     },
     {
-      "path": "src/assets/fonts/Poppins-ExtraLight.ttf",
-      "sha1": "85af6582a7e6155917c605f9d3fed68c02b23b06"
+      "path": "src/assets/fonts/Lovato-Light.ttf",
+      "sha1": "2be4079b8a5bbfd90d2fbf8ac0db4a7a06d97dff"
     },
     {
-      "path": "src/assets/fonts/Poppins-Light.ttf",
-      "sha1": "e247a92158e112f8bf7b638c8d95381d66b00dbb"
+      "path": "src/assets/fonts/Lovato-Regular.ttf",
+      "sha1": "47f48bbee2b142b00de31c28bb0c5eeab099d9b7"
     },
     {
-      "path": "src/assets/fonts/Poppins-Medium.ttf",
-      "sha1": "283f21b44efbdbf276ba802be2d949a36bbc4233"
-    },
-    {
-      "path": "src/assets/fonts/Poppins-Regular.ttf",
-      "sha1": "fdd3002e7d814ee47c1c1b8487c72c6bbb3a2d00"
-    },
-    {
-      "path": "src/assets/fonts/Poppins-SemiBold.ttf",
-      "sha1": "8a4ace9392d06bcb7f8ea2f5169b07e4c383a90d"
-    },
-    {
-      "path": "src/assets/fonts/Poppins-Thin.ttf",
-      "sha1": "09ba4dcd5509c8085bf88c665dcc51cbdfced27b"
-    },
-    {
-      "path": "src/assets/fonts/app_icons.ttf",
-      "sha1": "18e5fe2f93c853bbb495975f04df56438d595de5"
+      "path": "src/assets/splash/stabex_splash.json",
+      "sha1": "e4eaef4c423e31a95e45a4952c9acb8a273adf22"
     }
   ]
 }
